@@ -1,0 +1,39 @@
+---
+import LandingLayout from "../layouts/LandingLayout.astro"
+import FirstLevel from "../components/landing/johan/FirstLevel.astro"
+import "../styles/global.css"
+---
+<style>
+	  :root{
+    --obsidian:#0a0a0b;
+    --obsidian-2:#111114;
+    --bone:#f2efe9;
+    --bone-dim:rgba(242,239,233,0.55);
+    --bone-faint:rgba(242,239,233,0.14);
+    --violet:#241934;
+    --violet-deep:#0e0817;
+    --amber:#e8a33d;
+    --amber-dim:rgba(232,163,61,0.35);
+    --syn-green:#7ee787;
+    --syn-pink:#ff6ac1;
+    --syn-blue:#6cb6ff;
+    --mono:'IBM Plex Mono',monospace;
+    --sans:'Inter',sans-serif;
+    --hand:'Caveat',cursive;
+  }
+</style>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Johan's Profile</title>
+	</head>
+	<body>
+		<LandingLayout>
+			<FirstLevel />
+		</LandingLayout>
+	</body>
+</html>

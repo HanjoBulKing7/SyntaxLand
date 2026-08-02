@@ -1,0 +1,8 @@
+.level-1{
+    background:
+      linear-gradient(var(--bone-faint) 1px, transparent 1px),
+      linear-gradient(90deg, var(--bone-faint) 1px, transparent 1px),
+      var(--obsidian);
+    background-size:  110px 100px;
+    border:10px solid var(--bone-faint);
+}
