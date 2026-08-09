@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
-/* 1. Registramos las clases en tu tema de Tailwind v4 */
+
 @theme {
   --font-oldenglish: 'Old English', serif;
   --font-tangerineregular: 'TangerineRegular', serif;
-  --font-tangerinebold: 'TangerineBold', serif; /* Corregido: antes apuntaba a 'TangerineBold' pero abajo decía 'TagerineBold' */
-  --font-unifraktur: 'UnifrakturMaguntia-Regular', serif; /* Corregido: Debe coincidir exactamente con el font-family de abajo */
+  --font-tangerinebold: 'TangerineBold', serif;
+  --font-unifraktur: 'UnifrakturMaguntia-Regular', serif; 
 }
 
-/* 2. Declaración de las fuentes locales (.ttf) */
 @font-face {
   font-family: 'Old English';
   src: url('/fonts/OldeEnglish.ttf') format('truetype');
@@ -26,7 +25,7 @@
 }
 
 @font-face {
-  font-family: 'TangerineBold'; /* Corregido: Le faltaba la letra 'n' en tu código anterior (decía TagerineBold) */
+  font-family: 'TangerineBold'; 
   src: url('/fonts/Tangerine-Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -34,7 +33,7 @@
 }
 
 @font-face {
-  font-family: 'UnifrakturMaguntia-Regular'; /* Corregido: La 'U' inicial debe ser mayúscula para enlazar correctamente arriba */
+  font-family: 'UnifrakturMaguntia-Regular'; 
   src: url('/fonts/UnifrakturMaguntia-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;

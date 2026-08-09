@@ -1,39 +1,51 @@
 ---
 import "../../../styles/landing/johan/1stLevlel.css"
 ---
-<section id="l1" class="level-1 text-5xl text-white w-screen">
- 
-  <div class="l1-inner flex md:flex-row md:justify-between" data-reveal>
-    <div class="eyebrow">Perfil // Nivel 01</div>
- 
-    <div class="name-block flex flex-row justify-between gap-40  ">
-      <img src="/img/Johancito.jpg" alt="Profile's picture" class="h-70 w-80 rounded-4xl">
-      <h1>Johan Yahir<br>Villalpando Ibarra</h1>
+<section id="l1" class="level-1 w-full min-h-screen px-5 py-6 sm:px-10 sm:py-10 lg:px-20 text-white">
+
+  <div class="l1-inner flex flex-col gap-10" data-reveal>
+    <span class="eyebrow">Perfil // Nivel 0</span>
+
+    <div class="name-block flex flex-col-reverse items-center gap-6
+                md:flex-row md:justify-between md:items-center md:gap-10">
+
+      <h1 class="font-tangerinebold text-4xl text-center leading-tight
+                 sm:text-5xl md:text-6xl lg:text-7xl
+                 md:text-right">
+        Johan Yahir<br>Villalpando Ibarra
+      </h1>
+
+      <img
+        src="/img/Johancito.jpg"
+        alt="Foto de perfil de Johan"
+        class="h-40 w-40 rounded-3xl object-cover shrink-0
+               border-2 border-transparent transition-colors duration-300
+               hover:border-amber-100
+               sm:h-52 sm:w-52
+               md:h-56 md:w-56 md:rounded-4xl"
+      >
     </div>
   </div>
 
-    <div class="role-annot">
-      <div class="role-text">
-        <span>Software</span>
-        <span>Engineer</span>
-      </div>
-    </div>
-    
-    <div class="space-y-5">
-      <p>
-      Enfocado en desarrolllo Full Stack con Java
-      </p>
-      <p>
-      Friki por la tecnología y muchas otras cosas, 
-      aquí podrás conocer de mí.
-      </p>
-    </div>
+  <div class="role-annot font-tangerinebold mt-14 sm:mt-20 text-center md:text-left">
+    <span class="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight">
+      Software Engineer
+    </span>
+    <p class="mt-3 text-base sm:text-lg md:text-xl opacity-80">
+      Enfocado en desarrollo Full Stack con Java
+    </p>
+  </div>
 
-    <!-- Prueba la opción 1 -->
-<h1 class="font-unifraktur text-4xl">UnifrakturMaguntia</h1>
-
-<!-- Prueba la opción 2 -->
-<h1 class="font-almendra text-4xl">Almendra Black</h1>
-
+  <button class="w-full flex justify-center mt-10 sm:mt-16">
+    <img
+      src="/img/CapySyntaxBtn.png"
+      alt="Botón para ir al universo de CapySyntax"
+      class="h-32 w-40 object-contain
+             sm:h-44 sm:w-56
+             md:h-60 md:w-70
+             transition-all duration-300 hover:drop-shadow-[0_0_20px_#a020f0]
+             cursor-pointer"
+    >
+  </button>
 
 </section>
