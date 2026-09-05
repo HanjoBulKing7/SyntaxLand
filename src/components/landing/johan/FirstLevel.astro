@@ -29,7 +29,7 @@ const socials: SocialsArray[] = [
 <section id="l1" class="level-1 w-full min-h-screen px-5 py-6 sm:px-10 sm:py-10 lg:px-20 text-white">
 
   <div class="l1-inner flex flex-col gap-10" data-reveal>
-    <span class="eyebrow">Perfil // Nivel 0</span>
+    <span class="eyebrow font-presstart font-semibold">Perfil // Nivel 0</span>
 
     <div class="name-block flex flex-col-reverse items-center gap-6
                 md:flex-row md:justify-between md:items-center md:gap-10">
@@ -62,24 +62,28 @@ const socials: SocialsArray[] = [
     <span class="font-oldenglish text-6xl" >Redes: </span> 
   </div>
 
-  <button class="w-full flex justify-end mt-10 sm:mt-16">
-    <img
-      src="/img/CapySyntaxBtn.png"
-      alt="Botón para ir al universo de CapySyntax"
-      class="h-32 w-40 object-contain
-             sm:h-44 sm:w-56
-             md:h-60 md:w-70
-             transition-all duration-300 hover:drop-shadow-[0_0_20px_#a020f0]
-             cursor-pointer"
-    >
-  </button>
 
-  <div class="group border-2 border-white rounded-lg sm:grid sm:grid-cols-2 md:flex flex-wrap gap-4 sm:gap-6 md:gap-8 py-3 px-4 w-fit">
-    {socials.map(({ Icon, href, label }) => (
-      <Icon href={href} label={label} 
-      class='sm:w-10 sm:h-12 md:w-13 md:h-13 hover:scale-150 transition-transform hover:drop-shadow-[0_0_20px_#fff]' />
-      ))
-    }
+  <div class="md:justify-between mt-7 md:mt-10 w-full">
+
+    <div class="group border-2 border-white rounded-lg grid grid-cols-2 md:flex md:flex-wrap gap-4 sm:gap-6 md:gap-8 py-3 px-4 w-fit">
+      {socials.map(({ Icon, href, label }) => (
+        <Icon href={href} label={label} 
+        class='w-7 h-7 md:w-13 md:h-13 hover:scale-150 transition-transform hover:drop-shadow-[0_0_20px_#fff]' />
+        ))
+      }
+    </div>
+
+    <button class="w-full flex justify-end mt-10 sm:mt-16">
+      <img
+        src="/img/CapySyntaxBtn.png"
+        alt="Botón para ir al universo de CapySyntax"
+        class="h-32 w-40 object-contain
+              sm:h-44 sm:w-56
+              md:h-60 md:w-70
+              transition-all duration-300 hover:drop-shadow-[0_0_20px_#a020f0]
+              cursor-pointer"
+      >
+    </button>
   </div>
 
 </section>
