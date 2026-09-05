@@ -1,29 +1,85 @@
 ---
 import "../../../styles/landing/johan/1stLevlel.css"
+import Facebook from "../../shared/icons/Facebook.astro"
+import GitHub from "../../shared/icons/GitHub.astro"
+import Pinterest from "../../shared/icons/Pinterest.astro"
+import TikTok from "../../shared/icons/TikTok.astro"
+import X from "../../shared/icons/X.astro"
+import Telegram from "../../shared/icons/Telegram.astro"
+import Instagram from "../../shared/icons/Instagram.astro"
+import YouTube from "../../shared/icons/YouTube.astro"
+
+type SocialsArray = {
+  Icon: typeof Facebook;
+  href: string;
+  label: string;
+} 
+const socials: SocialsArray[] = [
+  { Icon: Facebook,  href: "https://www.facebook.com/YahirCool",              label: "Facebook" },
+  { Icon: Instagram, href: "https://www.instagram.com/johan7villalpando/",    label: "Instagram" },
+  { Icon: Telegram,  href: "http://t.me/JohanVillalpando",                    label: "Telegram" },
+  { Icon: TikTok,    href: "https://www.tiktok.com/@johan7villalpando",       label: "TikTok" },
+  { Icon: GitHub,    href: "https://github.com/HanjoBulKing7",                label: "GitHub" },
+  { Icon: Pinterest, href: "https://mx.pinterest.com/yahircool689/",          label: "Pinterest" },
+  { Icon: X,         href: "https://x.com/Johancitox7",                      label: "X" },
+  { Icon: YouTube,   href: "https://www.youtube.com/@johanyahir5226",         label: "YouTube" },
+];
+
 ---
-<section id="l1" class="level-1 text-5xl text-white w-screen">
-  <div class="persona-toggle" tabindex="0">
-    🐹 CapySyntax — próximamente
-    <div class="tip">Aquí podrás cambiar de universo: de Johan a su alter ego CapySyntax. Todo el perfil se adapta, como un idioma.</div>
-  </div>
- 
-  <div class="l1-inner" data-reveal>
-    <div class="eyebrow">Perfil // Nivel 01</div>
- 
-    <div class="name-block">
-      <h1>Johan Yahir<br>Villalpando Ibarra</h1>
+<section id="l1" class="level-1 w-full min-h-screen px-5 py-6 sm:px-10 sm:py-10 lg:px-20 text-white">
+
+  <div class="l1-inner flex flex-col gap-10" data-reveal>
+    <span class="eyebrow">Perfil // Nivel 0</span>
+
+    <div class="name-block flex flex-col-reverse items-center gap-6
+                md:flex-row md:justify-between md:items-center md:gap-10">
+
+      <h1 class="font-tangerinebold text-4xl text-center leading-tight
+                 sm:text-5xl md:text-6xl lg:text-7xl
+                 md:text-right">
+        Johan Yahir<br>Villalpando Ibarra
+      </h1>
+
+      <img
+        src="/img/Johancito.jpg"
+        alt="Foto de perfil de Johan"
+        class="h-40 w-40 rounded-3xl object-cover shrink-0
+               border-2 border-transparent transition-colors duration-300
+               hover:border-amber-100
+               sm:h-52 sm:w-52
+               md:h-100 md:w-100 md:rounded-2xl"
+      >
     </div>
- 
-    <div class="role-annot">
-      <div class="role-text">
-        <span>Software</span>
-        <span>Engineer</span>
-      </div>
-    </div>
- 
   </div>
- 
-  <div class="scroll-cue">
-    <span>construir</span>
+
+  <div class="role-annot font-tangerinebold mt-14 sm:mt-20 text-center md:text-left">
+    <span class="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight">
+      Software Engineer
+    </span>
   </div>
+
+  <div class=" pt-40">
+    <span class="font-oldenglish text-6xl" >Redes: </span> 
+  </div>
+
+  <button class="w-full flex justify-end mt-10 sm:mt-16">
+    <img
+      src="/img/CapySyntaxBtn.png"
+      alt="Botón para ir al universo de CapySyntax"
+      class="h-32 w-40 object-contain
+             sm:h-44 sm:w-56
+             md:h-60 md:w-70
+             transition-all duration-300 hover:drop-shadow-[0_0_20px_#a020f0]
+             cursor-pointer"
+    >
+  </button>
+
+  <div class="group border-2 border-white rounded-lg sm:grid sm:grid-cols-2 md:flex flex-wrap gap-4 sm:gap-6 md:gap-8 py-3 px-4 w-fit">
+    {socials.map(({ Icon, href, label }) => (
+      <Icon href={href} label={label} 
+      class='sm:w-10 sm:h-12 md:w-13 md:h-13 hover:scale-150 transition-transform hover:drop-shadow-[0_0_20px_#fff]' />
+      ))
+    }
+  </div>
+
 </section>

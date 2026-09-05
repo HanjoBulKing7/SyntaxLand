@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+
+@theme {
+  --font-oldenglish: 'Old English', serif;
+  --font-tangerineregular: 'TangerineRegular', serif;
+  --font-tangerinebold: 'TangerineBold', serif;
+  --font-unifraktur: 'UnifrakturMaguntia-Regular', serif; 
+}
+
+@font-face {
+  font-family: 'Old English';
+  src: url('/fonts/OldeEnglish.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TangerineRegular';
+  src: url('/fonts/Tangerine-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TangerineBold'; 
+  src: url('/fonts/Tangerine-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UnifrakturMaguntia-Regular'; 
+  src: url('/fonts/UnifrakturMaguntia-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
