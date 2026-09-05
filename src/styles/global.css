@@ -6,6 +6,7 @@
   --font-tangerineregular: 'TangerineRegular', serif;
   --font-tangerinebold: 'TangerineBold', serif;
   --font-unifraktur: 'UnifrakturMaguntia-Regular', serif; 
+  --font-presstart: 'PressStart2p-Regular', serif;
 }
 
 @font-face {
@@ -35,6 +36,14 @@
 @font-face {
   font-family: 'UnifrakturMaguntia-Regular'; 
   src: url('/fonts/UnifrakturMaguntia-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PressStart2p-Regular'; 
+  src: url('/fonts/PressStart2P-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
