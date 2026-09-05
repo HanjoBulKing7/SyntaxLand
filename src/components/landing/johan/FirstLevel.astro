@@ -8,6 +8,23 @@ import X from "../../shared/icons/X.astro"
 import Telegram from "../../shared/icons/Telegram.astro"
 import Instagram from "../../shared/icons/Instagram.astro"
 import YouTube from "../../shared/icons/YouTube.astro"
+
+type SocialsArray = {
+  Icon: typeof Facebook;
+  href: string;
+  label: string;
+} 
+const socials: SocialsArray[] = [
+  { Icon: Facebook,  href: "https://www.facebook.com/YahirCool",              label: "Facebook" },
+  { Icon: Instagram, href: "https://www.instagram.com/johan7villalpando/",    label: "Instagram" },
+  { Icon: Telegram,  href: "http://t.me/JohanVillalpando",                    label: "Telegram" },
+  { Icon: TikTok,    href: "https://www.tiktok.com/@johan7villalpando",       label: "TikTok" },
+  { Icon: GitHub,    href: "https://github.com/HanjoBulKing7",                label: "GitHub" },
+  { Icon: Pinterest, href: "https://mx.pinterest.com/yahircool689/",          label: "Pinterest" },
+  { Icon: X,         href: "https://x.com/Johancitox7",                      label: "X" },
+  { Icon: YouTube,   href: "https://www.youtube.com/@johanyahir5226",         label: "YouTube" },
+];
+
 ---
 <section id="l1" class="level-1 w-full min-h-screen px-5 py-6 sm:px-10 sm:py-10 lg:px-20 text-white">
 
@@ -30,7 +47,7 @@ import YouTube from "../../shared/icons/YouTube.astro"
                border-2 border-transparent transition-colors duration-300
                hover:border-amber-100
                sm:h-52 sm:w-52
-               md:h-80 md:w-75 md:rounded-4xl"
+               md:h-100 md:w-100 md:rounded-2xl"
       >
     </div>
   </div>
@@ -39,14 +56,10 @@ import YouTube from "../../shared/icons/YouTube.astro"
     <span class="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight">
       Software Engineer
     </span>
-    <p class="mt-3 text-base sm:text-lg md:text-4xl opacity-80">
-      Enfocado en desarrollo Full Stack con Java
-    </p>
   </div>
 
   <div class=" pt-40">
     <span class="font-oldenglish text-6xl" >Redes: </span> 
-    
   </div>
 
   <button class="w-full flex justify-end mt-10 sm:mt-16">
@@ -61,15 +74,12 @@ import YouTube from "../../shared/icons/YouTube.astro"
     >
   </button>
 
-  <div class="group border-2 border-white rounded-lg sm:grid-cols-2 sm:gap-6 md:flex gap-2 md:flex-row md:gap-10 p-5 w-fit">
-    <Facebook href="https://www.facebook.com/YahirCool" label="Facebopok"  />
-    <Instagram href="https://www.instagram.com/johan7villalpando/" label="Instagram"/>
-    <Telegram  href="http://t.me/JohanVillalpando" label="Telegram" />
-    <TikTok href="https://www.tiktok.com/@johan7villalpando"  label="TikTok" />
-    <GitHub href="https://github.com/HanjoBulKing7" label="GitHub" />
-    <Pinterest href="https://mx.pinterest.com/yahircool689/" label="Pinterest" />
-    <X href="https://x.com/Johancitox7" label="X"  />
-    <YouTube href="https://www.youtube.com/@johanyahir5226" label="YouTube" />
+  <div class="group border-2 border-white rounded-lg sm:grid sm:grid-cols-2 md:flex flex-wrap gap-4 sm:gap-6 md:gap-8 py-3 px-4 w-fit">
+    {socials.map(({ Icon, href, label }) => (
+      <Icon href={href} label={label} 
+      class='sm:w-10 sm:h-12 md:w-13 md:h-13 hover:scale-150 transition-transform hover:drop-shadow-[0_0_20px_#fff]' />
+      ))
+    }
   </div>
 
 </section>
